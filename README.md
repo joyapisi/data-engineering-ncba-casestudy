@@ -20,6 +20,8 @@
 
 ## Case Study 1 <a name="1"></a>
 
+#### The LoopDFS business is experiencing rapid growth across various countries, and you are now part of the MSL (Mobile Savings and Loans) Value Stream. This team, comprising diverse experts, will  collaborate intensively to increase agility and responsiveness. Among your key tasks will be designing and developing a robust database and creating ETL processes for core data points, including Customer, Loans, savings, and Transactions data.
+
 1.1. **Process for Designing and Architecting a Data Warehouse Tailored to MSL’s needs (10 marks)** <a name="1.1"></a>
 
 My design process would be as follows:
@@ -31,7 +33,7 @@ For data that rarely changes, I would use Dimensions tables e.g. names of people
 - I would enforce **scalability** scalability across multiple regions as MSL expands for multi-tenant architecture
 
 
-1.2. **Key Steps in Building the Data Warehouse (10 marks)** <a name="1.2"></a>
+1.2. **Key Steps & Considerations in Building the Data Warehouse (10 marks)** <a name="1.2"></a>
 
 - **Landing Schema:** I will create a landing schema to receive the data from external systems
 - **Data Transformation:** I will Transform data into Dimensional tables and Fact Tables. Here, transactional data will go to the Fact tables to handle data growing exponentially e.g. loans, savings, and transactional data. For data that rarely changes, I would use Dimensions tables e.g. names of people, and bank branches.
@@ -41,7 +43,7 @@ For data that rarely changes, I would use Dimensions tables e.g. names of people
   - *Long Term:*  Fact tables will be stored for up to the number of years that are necessary, as per Zambian legal and business requirements. 
 - **Testing & Validation** – Cross-verification of information to ensure data accuracy such as loan disbursement accuracy for Zambian credit scoring models.
 
-1.3. **Approach to ETL (10 marks)** <a name="1.3"></a>
+1.3. **Approach to ETL Process (10 marks)** <a name="1.3"></a>
 My approach would be as follows:
 - **ETL Tool:** Pick/specify a tool to use. In my case, I would use Oracle Data Integrator (ODI) due to its high-performance data integration and warehousing where transformations are performed within the target database
 - **Extract Process:** If the primary system generates files, my process would be to extract files from the Mobile Savings and Loans(MSL) system to a File Transfer Protocol(FTP) location and then process them to my landing schema.
@@ -83,7 +85,9 @@ Ensure ETL Jobs Run on Time to Maintain Data Freshness: Scheduled jobs must exec
 
 
 ## Case Study 2 <a name="q2"></a> 
- 
+
+#### The data within LoopDFS is expanding rapidly, and the business demand for analytics and reporting is on the rise. Each team’s main responsibility is to make data-driven decisions that enhance customer engagement, segmentation, acquisition, retention, and customer experience. The Data Engineering Team’s primary objective is to advocate for a Big Data Platform capable of accommodating these large data volumes and extracting actionable insights.
+
 2.1. **Key Factors for Evaluating a Suitable Platform (10 marks)** <a name="2.1"></a>
 - **Data Sources and Data Types:** I would first identify what types of data the platform needs to handle, such as structured (databases), semi-structured (JSON, XML), or unstructured (videos, logs, social media posts). A good platform should support multiple data formats to ensure smooth integration across different business units. If a platform is limited in the types of data it can process, it could create compatibility issues in the long run. Choosing a system that can ingest, transform, and store diverse data types ensures flexibility and scalability.
 - **Determine the Platform Based on Data Sources (Log Files, Social Media, Cloud, etc.):** Different platforms specialize in handling different data sources, so I would ensure the one I choose aligns with my needs. If I am working with log files and machine-generated data, I might look at platforms like Splunk or ELK Stack; if dealing with social media and cloud sources, something like Google BigQuery or Snowflake would be a better fit. The platform should be able to pull data from multiple sources without complex workarounds. This helps streamline data ingestion and makes analysis more efficient.
